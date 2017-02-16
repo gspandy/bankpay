@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merchant>
+    <head>
+        <version>$obj.version</version>
+        <msgType>01</msgType>
+        <reqDate>$obj.reqDate</reqDate>
+    </head>
+    <body>
+    <merchantCode>$obj.merchantCode</merchantCode>
+    <extend1>$stringUtil.defaultIfBlank($obj.extend1)</extend1>
+    <extend2>$stringUtil.defaultIfBlank($obj.extend2)</extend2>
+    <extend3>$stringUtil.defaultIfBlank($obj.extend3)</extend3>
+    </body>
+</merchant>

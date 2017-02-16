@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merchant>
+<head>
+	<version>$obj.version</version>
+	<msgType>01</msgType>
+	<reqDate>$obj.reqDate</reqDate>
+</head>
+<body>
+    <merchantCode>$obj.merchantCode</merchantCode>
+    <scene>$obj.scene</scene>
+    <authCode>$obj.authCode</authCode>
+    <totalAmount>$obj.totalAmount</totalAmount>
+    <subject>$obj.subject</subject>
+    <desc>$stringUtil.defaultIfBlank($obj.desc)</desc>
+    <operatorId>$stringUtil.defaultIfBlank($obj.operatorId)</operatorId>
+    <storeId>$stringUtil.defaultIfBlank($obj.storeId)</storeId>
+    <terminalId>$stringUtil.defaultIfBlank($obj.terminalId)</terminalId>
+    <subAppid>$stringUtil.defaultIfBlank($obj.subAppid)</subAppid>
+    <source>$obj.source</source>
+    <extend1>$stringUtil.defaultIfBlank($obj.extend1)</extend1>
+    <extend2>$stringUtil.defaultIfBlank($obj.extend2)</extend2>
+    <extend3>$stringUtil.defaultIfBlank($obj.extend3)</extend3>
+</body>
+</merchant>

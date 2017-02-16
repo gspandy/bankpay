@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://code.alibabatech.com/schema/dubbo
+			http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- application 全局唯一 -->
+    <dubbo:application id="bankpayserviceApplication"
+                       name="${bankpayservice.dubbo.application.name}"
+                       owner="${bankpayservice.dubbo.application.owner}"
+                       organization="${bankpayservice.dubbo.application.organization}"/>
+
+    <!-- dubbo协议 -->
+    <dubbo:protocol id="bankpayserviceProtocol"
+                    name="${bankpayservice.dubbo.protocol.name}"
+                    port="${bankpayservice.dubbo.protocol.port}"/>
+
+    <!-- 注册中心 -->
+    <dubbo:registry id="bankpayserviceRegistry"
+                    client="${bankpayservice.dubbo.registry.client}"
+                    protocol="${bankpayservice.dubbo.registry.protocol}"
+                    address="${bankpayservice.dubbo.registry.address}"
+                    file="/data/dubbo/bankpayservice/bankpayservice-dubbo-registry.properties"/>
+
+
+    <!--支付提供服务-->
+    <dubbo:provider id="bankpayProvider"
+                    application="bankpayserviceApplication"
+                    protocol="bankpayserviceProtocol"
+                    registry="bankpayserviceRegistry"
+                    timeout="${bankpayservice.dubbo.provide.timeout}"
+                    retries="${bankpayservice.dubbo.provide.retries}"
+                    loadbalance="${bankpayservice.dubbo.provide.loadbalance}"
+                    cluster="${bankpayservice.dubbo.provide.cluster}"
+                    group="${bankpayservice.dubbo.provide.group}"
+                    version="${bankpayservice.dubbo.provide.version}"
+                    delay="-1"/>
+
+
+    <dubbo:service interface="com.qiyu.bankpay.service.CMBCPayService" ref="cmbcPayService" provider="bankpayProvider"/>
+    <dubbo:service interface="com.qiyu.bankpay.service.CTTICPayService" ref="ctticPayService" provider="bankpayProvider"/>
+    <dubbo:service interface="com.qiyu.bankpay.service.IndustrialPayService" ref="industrialPayService" provider="bankpayProvider"/>
+    <dubbo:service interface="com.qiyu.bankpay.service.KFTPayService" ref="kftPayService" provider="bankpayProvider"/>
+
+</beans>

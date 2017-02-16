@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://code.alibabatech.com/schema/dubbo
+              http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!-- application 全局唯一 -->
+    <dubbo:application id="uploadserviceApplication"
+                       name="${uploadservice.dubbo.application.name}"
+                       owner="${uploadservice.dubbo.application.owner}"
+                       organization="${uploadservice.dubbo.application.organization}"/>
+
+    <!-- dubbo协议 -->
+    <dubbo:protocol id="uploadserviceProtocol"
+                    name="${uploadservice.dubbo.protocol.name}"
+                    port="${uploadservice.dubbo.protocol.port}"/>
+
+    <!-- 注册中心 -->
+    <dubbo:registry id="uploadserviceRegistry"
+                    client="${uploadservice.dubbo.registry.client}"
+                    protocol="${uploadservice.dubbo.registry.protocol}"
+                    address="${uploadservice.dubbo.registry.address}"
+                    file="/data/dubbo/uploadservice/uploadservice-dubbo-registry.properties"/>
+
+
+    <dubbo:consumer id="uploadserviceConsumer"
+                    application="uploadserviceApplication"
+                    registry="uploadserviceRegistry"
+                    check="${uploadservice.dubbo.consumer.check}"
+                    retries="${uploadservice.dubbo.consumer.retries}"
+                    group="${uploadservice.dubbo.consumer.group}"
+                    version="${uploadservice.dubbo.consumer.version}"/>
+
+
+
+    <dubbo:reference id="uploadService"
+                     interface="com.qiyu.upload.service.UploadService"
+                     consumer="uploadserviceConsumer"/>
+
+
+
+
+</beans>

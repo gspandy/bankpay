@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding="UTF8"?>
+<!DOCTYPE digester-rules PUBLIC
+        "-//Apache Commons //DTD digester-rules XML V1.0//EN"
+        "http://commons.apache.org/digester/dtds/digester-rules-3.0.dtd">
+<digester-rules>
+        <object-create-rule
+                classname="com.qiyu.bankpay.domain.result.cttic.CTTICMicroPayRlt"/> <!-- 创建对象 -->
+        <set-properties-rule/>
+        <bean-property-setter-rule pattern="version"
+                                   propertyname="version"/>
+        <bean-property-setter-rule pattern="charset"
+                                   propertyname="charset"/>
+        <bean-property-setter-rule pattern="sign_type"
+                                   propertyname="sign_type"/>
+        <bean-property-setter-rule pattern="message"
+                                   propertyname="message"/>
+        <bean-property-setter-rule pattern="need_query"
+                                   propertyname="need_query"/>
+        <bean-property-setter-rule pattern="result_code"
+                                   propertyname="result_code"/>
+        <bean-property-setter-rule pattern="mch_id"
+                                   propertyname="mch_id"/>
+        <bean-property-setter-rule pattern="device_info"
+                                   propertyname="device_info"/>
+        <bean-property-setter-rule pattern="nonce_str"
+                                   propertyname="nonce_str"/>
+        <bean-property-setter-rule pattern="err_code"
+                                   propertyname="err_code"/>
+        <bean-property-setter-rule pattern="err_msg"
+                                   propertyname="err_msg"/>
+        <bean-property-setter-rule pattern="sign"
+                                   propertyname="sign"/>
+        <bean-property-setter-rule pattern="openid"
+                                   propertyname="openid"/>
+        <bean-property-setter-rule pattern="trade_type"
+                                   propertyname="trade_type"/>
+        <bean-property-setter-rule pattern="is_subscribe"
+                                   propertyname="is_subscribe"/>
+        <bean-property-setter-rule pattern="pay_result"
+                                   propertyname="pay_result"/>
+        <bean-property-setter-rule pattern="pay_info"
+                                   propertyname="pay_info"/>
+        <bean-property-setter-rule pattern="transaction_id"
+                                   propertyname="transaction_id"/>
+        <bean-property-setter-rule pattern="out_transaction_id"
+                                   propertyname="out_transaction_id"/>
+        <bean-property-setter-rule pattern="sub_is_subscribe"
+                                   propertyname="sub_is_subscribe"/>
+        <bean-property-setter-rule pattern="sub_appid"
+                                   propertyname="sub_appid"/>
+        <bean-property-setter-rule pattern="out_trade_no"
+                                   propertyname="out_trade_no"/>
+        <bean-property-setter-rule pattern="total_fee"
+                                   propertyname="total_fee"/>
+        <bean-property-setter-rule pattern="coupon_fee"
+                                   propertyname="coupon_fee"/>
+        <bean-property-setter-rule pattern="fee_type"
+                                   propertyname="fee_type"/>
+        <bean-property-setter-rule pattern="attach"
+                                   propertyname="attach"/>
+        <bean-property-setter-rule pattern="bank_type"
+                                   propertyname="bank_type"/>
+        <bean-property-setter-rule pattern="bank_billno"
+                                   propertyname="bank_billno"/>
+        <bean-property-setter-rule pattern="time_end"
+                                   propertyname="time_end"/>
+
+</digester-rules>

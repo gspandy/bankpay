@@ -1,0 +1,23 @@
+<xml>
+    <service>unified.trade.micropay</service>
+    <version>2.0</version>
+    <charset>$obj.charset</charset>
+    <sign_type>$obj.sign_type</sign_type>
+    <mch_id>$obj.mch_id</mch_id>
+    <groupno>$stringUtil.defaultIfBlank($obj.groupno)</groupno>
+    <out_trade_no>$obj.out_trade_no</out_trade_no>
+    <device_info>$stringUtil.defaultIfBlank($obj.device_info)</device_info>
+    <body><![CDATA[$obj.body]]></body>
+    <attach>$stringUtil.defaultIfBlank($obj.attach)</attach>
+    <total_fee>$obj.total_fee</total_fee>
+    <mch_create_ip>$obj.mch_create_ip</mch_create_ip>
+    <auth_code>$obj.auth_code</auth_code>
+    <time_start>$stringUtil.defaultIfBlank($obj.time_start)</time_start>
+    <time_expire>$stringUtil.defaultIfBlank($obj.time_expire)</time_expire>
+    <op_user_id>$stringUtil.defaultIfBlank($obj.op_user_id)</op_user_id>
+    <op_shop_id>$stringUtil.defaultIfBlank($obj.op_shop_id)</op_shop_id>
+    <op_device_id>$stringUtil.defaultIfBlank($obj.op_device_id)</op_device_id>
+    <goods_tag>$stringUtil.defaultIfBlank($obj.goods_tag)</goods_tag>
+    <nonce_str>$obj.nonce_str</nonce_str>
+    <sign>$obj.sign</sign>
+</xml>

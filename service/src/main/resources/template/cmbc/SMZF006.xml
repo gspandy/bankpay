@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding="UTF8"?>
+<!DOCTYPE digester-rules PUBLIC
+        "-//Apache Commons //DTD digester-rules XML V1.0//EN"
+        "http://commons.apache.org/digester/dtds/digester-rules-3.0.dtd">
+<digester-rules>
+    <pattern value="message">
+        <object-create-rule
+                classname="com.qiyu.bankpay.domain.result.cmbc.CMBCTransSearchPayRlt"/> <!-- 创建对象 -->
+        <set-properties-rule/>
+        <pattern value="head">
+            <bean-property-setter-rule pattern="version"
+                                       propertyname="version"/>
+            <bean-property-setter-rule pattern="msgType"
+                                       propertyname="msgType"/>
+            <bean-property-setter-rule pattern="smzfMsgId"
+                                       propertyname="smzfMsgId"/>
+            <bean-property-setter-rule pattern="reqDate"
+                                       propertyname="reqDate"/>
+            <bean-property-setter-rule pattern="respDate"
+                                       propertyname="respDate"/>
+            <bean-property-setter-rule pattern="respType"
+                                       propertyname="respType"/>
+            <bean-property-setter-rule pattern="respCode"
+                                       propertyname="respCode"/>
+            <bean-property-setter-rule pattern="respMsg"
+                                       propertyname="respMsg"/>
+
+        </pattern>
+
+        <pattern value="body">
+            <bean-property-setter-rule pattern="oriRespType"
+                                       propertyname="oriRespType"/>
+            <bean-property-setter-rule pattern="oriRespCode"
+                                       propertyname="oriRespCode"/>
+            <bean-property-setter-rule pattern="oriRespMsg"
+                                       propertyname="oriRespMsg"/>
+            <bean-property-setter-rule pattern="totalAmount"
+                                       propertyname="totalAmount"/>
+            <bean-property-setter-rule pattern="buyerPayAmount"
+                                       propertyname="buyerPayAmount"/>
+            <bean-property-setter-rule pattern="pointAmount"
+                                       propertyname="pointAmount"/>
+            <bean-property-setter-rule pattern="storeId"
+                                       propertyname="storeId"/>
+            <bean-property-setter-rule pattern="terminalId"
+                                       propertyname="terminalId"/>
+            <bean-property-setter-rule pattern="buyerId"
+                                       propertyname="buyerId"/>
+            <bean-property-setter-rule pattern="buyerAccount"
+                                       propertyname="buyerAccount"/>
+            <bean-property-setter-rule pattern="settleDate"
+                                       propertyname="settleDate"/>
+            <bean-property-setter-rule pattern="isClearOrCancel"
+                                       propertyname="isClearOrCancel"/>
+            <bean-property-setter-rule pattern="channelNo"
+                                       propertyname="channelNo"/>
+            <bean-property-setter-rule pattern="payTime"
+                                       propertyname="payTime"/>
+            <bean-property-setter-rule pattern="payType"
+                                       propertyname="payType"/>
+            <bean-property-setter-rule pattern="extend1"
+                                       propertyname="extend1"/>
+            <bean-property-setter-rule pattern="extend2"
+                                       propertyname="extend2"/>
+            <bean-property-setter-rule pattern="extend3"
+                                       propertyname="extend3"/>
+        </pattern>
+
+    </pattern>
+</digester-rules>

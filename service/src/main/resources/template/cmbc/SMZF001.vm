@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merchant>
+<head>
+	<version>$obj.version</version>
+	<msgType>01</msgType>
+	<reqDate>$obj.reqDate</reqDate>
+</head>
+<body>
+    <payWay>$obj.payWay</payWay>
+    <merchantId>$obj.merchantId</merchantId>
+    <merchantName>$obj.merchantName</merchantName>
+    <shortName>$obj.shortName</shortName>
+    <merchantAddress>$obj.merchantAddress</merchantAddress>
+    <servicePhone>$obj.servicePhone</servicePhone>
+    <orgCode>$stringUtil.defaultIfBlank($obj.orgCode)</orgCode>
+    <contactName>$stringUtil.defaultIfBlank($obj.contactName)</contactName>
+    <contactPhone>$stringUtil.defaultIfBlank($obj.contactPhone)</contactPhone>
+    <contactMobile>$stringUtil.defaultIfBlank($obj.contactMobile)</contactMobile>
+    <contactEmail>$stringUtil.defaultIfBlank($obj.contactEmail)</contactEmail>
+    <category>$obj.category</category>
+    <idCard>$stringUtil.defaultIfBlank($obj.idCard)</idCard>
+    <merchantLicense>$stringUtil.defaultIfBlank($obj.merchantLicense)</merchantLicense>
+    <accNo>$obj.accNo</accNo>
+    <accName>$obj.accName</accName>
+    <bankType>$obj.bankType</bankType>
+    <bankName>$obj.bankName</bankName>
+    <t0drawFee>$obj.t0drawFee</t0drawFee>
+    <t0tradeRate>$obj.t0tradeRate</t0tradeRate>
+    <t1drawFee>$obj.t1drawFee</t1drawFee>
+    <t1tradeRate>$obj.t1tradeRate</t1tradeRate>
+    <channelMerchantCode>$obj.channelMerchantCode</channelMerchantCode>
+    <remark>$stringUtil.defaultIfBlank($obj.remark)</remark>
+    <merchantCode>$stringUtil.defaultIfBlank($obj.merchantCode)</merchantCode>
+    <extend1>$stringUtil.defaultIfBlank($obj.extend1)</extend1>
+    <extend2>$stringUtil.defaultIfBlank($obj.extend2)</extend2>
+    <extend3>$stringUtil.defaultIfBlank($obj.extend3)</extend3>
+</body>
+</merchant>
